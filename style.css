@@ -9,13 +9,14 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(84, 6, 6);
+    background-color: rgb(162, 14, 125);
     position: sticky;
     top: 0;
 }
 nav.profile {
     display: flex;
     align-items: center; 
+    background-color: #818181;
 }
 nav.profile img {
     width: 40px;
@@ -33,14 +34,12 @@ nav.ul {
 nav ul li {
     margin-left: 20px;
     cursor: pointer;
-    border-bottom: 1px solid #fff;
     background-color: transparent;
     border: none;
     outline: none;
     padding: 10px 20px;
     font-size: 15px;
     font-weight: bold;
-    color: #fff;
     cursor: pointer;
     transition: color 0.3s, border-bottom-color 0.3s;
     border-bottom: 2px solid transparent;
@@ -75,14 +74,14 @@ nav ul li:hover {
     font-size: 15px;
     font-weight: bold;
     padding-bottom: 5px;
-    border-bottom: 1px solid #610404;
+    border-bottom: 1px solid #b92298;
     cursor: pointer;
 }
 .page-content header button:hover {
     color: #ccc;
     border-bottom-color: #000;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) 
     nav {
         justify-content: center;
     }
@@ -90,8 +89,41 @@ nav ul li:hover {
         display: none;
     }
 
-    .page-content header {
-        margin-top: 10px;
-        max-width: 100%;
-    }
-}
+    .page-content {
+        padding: 20px;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 800px; 
+            padding: 0 20px; 
+        }
+        .neon-text {
+            font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+            color: #fff;
+            font-size: 6vw;
+            position: relative;
+            animation: neon-effect 1.5s ease-in-out infinite alternate;
+        }
+        
+        @keyframes neon-effect {
+            0% {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ff00e0, 0 0 80px #ff00e0, 0 0 90px #ff00e0, 0 0 100px #ff00e0, 0 0 150px #ff00e0;
+            }
+            100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00e0, 0 0 70px #ff00e0, 0 0 80px #ff00e0, 0 0 90px #ff00e0, 0 0 140px #ff00e0;
+            }
+        }
+        
+        .left-to-right {
+            position: relative;
+            animation: left-to-right-animation 2s ease-in-out infinite;
+        }
+        
+        @keyframes left-to-right-animation {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        
